@@ -27,10 +27,10 @@ gemfile_name = "rails_#{Rails::VERSION::MAJOR}.gemfile"
 gemfile = File.expand_path("../gemfiles/#{gemfile_name}", File.dirname(__FILE__))
 
 # Ensure .test-rails-apps is created
-system "mkdir #{dir}" unless File.exists?(dir)
+system "mkdir #{dir}" unless File.exist?(dir)
 
 # Create the sample Rails app if it doesn't already exist
-unless File.exists? path
+unless File.exist? path
   args = %w[
     -m\ spec/support/rails_template_with_data.rb
     --skip-gemfile
