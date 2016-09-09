@@ -547,7 +547,7 @@ describe ActiveAdmin::FormBuilder do
       end
 
       it "should add a custom header" do
-        expect(body).to have_selector("h3", "Test heading")
+        expect(body).to have_selector("h3", text: "Test heading")
       end
 
     end
