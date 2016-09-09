@@ -1,4 +1,4 @@
-desc "Creates a test rails app for the specs to run against"
+desc "Creates a test Rails app for the specs to run against"
 task :setup, :parallel do |t, opts|
   require 'rails/version'
   if File.exists? dir = "spec/rails/rails-#{Shellwords.escape detect_rails_version}"

@@ -57,7 +57,7 @@ module ActiveAdminIntegrationSpecHelper
     arbre(assigns, helpers, &block).children.first
   end
 
-  # Setup a describe block which uses capybara and rails integration
+  # Setup a describe block which uses capybara and Rails integration
   # test methods.
   def describe_with_capybara(*args, &block)
     describe *args do

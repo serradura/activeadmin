@@ -38,7 +38,7 @@ Now you should be able to run the entire suite using:
 bundle exec rake test
 ```
 
-Which will generate a rails application in `spec/rails` to run the tests against.
+Which will generate a Rails application in `spec/rails` to run the tests against.
 
 If your tests are passing locally but they're failing on Travis, reset your test environment:
 
@@ -66,7 +66,7 @@ This will automatically create a Rails app if none already exists, and store it 
 `.test-rails-apps` folder. The currently active app is symlinked to `test-rails-app`.
 
 If you have any Bundler issues, call the `use_rails` script then prepend
-the version of rails you would like to use in an environment variable:
+the version of Rails you would like to use in an environment variable:
 
 ```sh
 script/use_rails 4.0.0
@@ -81,7 +81,7 @@ You should now be able to open <http://localhost:3000/admin> in your browser. Yo
 If you need to perform any other commands on the test application, use the
 `local` script. For example:
 
-To boot the rails console:
+To boot the Rails console:
 
 ```sh
 script/local console
@@ -93,7 +93,7 @@ Or to migrate the database:
 script/local rake db:migrate
 ```
 
-### 6. Run tests against major supported rails versions
+### 6. Run tests against major supported Rails versions
 
 Once you've implemented your code, got the tests passing, previewed it in a
 browser, you're ready to test it against multiple versions of Rails.
