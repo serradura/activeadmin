@@ -29,7 +29,7 @@ gem 'draper', rails_major == '5' ? '> 3.x' : '~> 2.1'
 gem 'pundit'
 
 # Utility gems used in both development & test environments
-gem 'rake', require: false
+gem 'rake'
 gem 'parallel_tests'
 
 # Debugging
