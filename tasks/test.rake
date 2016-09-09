@@ -1,7 +1,7 @@
 desc "Creates a test Rails app for the specs to run against"
 task :setup, :parallel do |t, opts|
   require 'rails/version'
-  if File.exists? dir = "spec/rails/rails-#{Shellwords.escape detect_rails_version}"
+  if File.exists? dir = "spec/rails/rails-#{Rails::VERSION::STRING}"
     puts "test app #{dir} already exists; skipping"
   else
     system 'mkdir -p spec/rails'
@@ -24,34 +24,6 @@ task test: ['spec:unit', 'spec:request', 'cucumber', 'cucumber:class_reloading']
 require 'coveralls/rake/task'
 Coveralls::RakeTask.new
 task test_with_coveralls: [:test, 'coveralls:push']
-
-namespace :test do
-
-  def run_tests_against(*versions)
-    current_version = detect_rails_version if File.exists?("Gemfile.lock")
-
-    versions.each do |version|
-      puts
-      puts "== Using Rails #{version}"
-
-      cmd "./script/use_rails #{version}"
-      cmd "bundle exec rspec spec"
-      cmd "bundle exec cucumber features"
-      cmd "bundle exec cucumber -p class-reloading features"
-    end
-
-    cmd "./script/use_rails #{current_version}" if current_version
-  end
-
-  desc "Run the full suite against the important versions of rails"
-  task :major_supported_rails do
-    run_tests_against *TRAVIS_RAILS_VERSIONS
-  end
-
-  desc "Alias for major_supported_rails"
-  task :all => :major_supported_rails
-
-end
 
 require 'rspec/core/rake_task'
 

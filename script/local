@@ -1,7 +1,6 @@
 #!/usr/bin/env ruby
 
 require 'shellwords'
-require File.expand_path('../../spec/support/detect_rails_version', __FILE__)
 
 unless ARGV[0]
   puts <<-EOF
@@ -19,11 +18,13 @@ Examples:
   exit(1)
 end
 
-# Set up some variables
-rails_version = detect_rails_version!
+require 'rails'
 
+# Set up some variables
 dir = ".test-rails-apps"
-path = "#{dir}/test-rails-app-#{rails_version}"
+path = "#{dir}/test-rails-app-#{Rails.version}"
+gemfile_name = "rails_#{Rails::VERSION::MAJOR}.gemfile"
+gemfile = File.expand_path("../gemfiles/#{gemfile_name}", File.dirname(__FILE__))
 
 # Ensure .test-rails-apps is created
 system "mkdir #{dir}" unless File.exists?(dir)
@@ -38,7 +39,7 @@ unless File.exists? path
     --skip-turbolinks
     --skip-test-unit
   ]
-  system "RAILS='#{rails_version}' bundle exec rails new #{Shellwords.escape path} #{args.join ' '}"
+  system "BUNDLE_GEMFILE=#{gemfile} bundle exec rails new #{Shellwords.escape path} #{args.join ' '}"
 end
 
 # Link this Rails app
@@ -50,4 +51,4 @@ RAILS_COMMANDS = %w{generate console server dbconsole g c s runner}
 args = RAILS_COMMANDS.include?(ARGV[0]) ? ["rails", ARGV].flatten : ARGV
 
 # Run the command
-exec "cd test-rails-app && GEMFILE=../Gemfile bundle exec #{args.join(" ")}"
+exec "cd test-rails-app && BUNDLE_GEMFILE=#{gemfile} bundle exec #{args.join(" ")}"
