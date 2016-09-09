@@ -35,7 +35,7 @@ bundle install
 Now you should be able to run the entire suite using:
 
 ```sh
-rake test
+bundle exec rake test
 ```
 
 Which will generate a rails application in `spec/rails` to run the tests against.
