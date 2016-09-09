@@ -38,6 +38,7 @@ bin/
 spec/rails
 *.sqlite3-journal
 Gemfile.lock
+gemfiles/rails_[3-5].gemfile.lock
 Gemfile-*.lock
 capybara*
 viewcumber

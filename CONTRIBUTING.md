@@ -65,14 +65,6 @@ script/local server
 This will automatically create a Rails app if none already exists, and store it in the
 `.test-rails-apps` folder. The currently active app is symlinked to `test-rails-app`.
 
-If you have any Bundler issues, call the `use_rails` script then prepend
-the version of rails you would like to use in an environment variable:
-
-```sh
-script/use_rails 4.0.0
-RAILS=4.0.0 script/local server
-```
-
 You should now be able to open <http://localhost:3000/admin> in your browser. You can log in using:
 
 	User: admin@example.com
@@ -99,7 +91,7 @@ Once you've implemented your code, got the tests passing, previewed it in a
 browser, you're ready to test it against multiple versions of Rails.
 
 ```sh
-rake test:major_supported_rails
+bundle exec appraisal rake test_with_coveralls
 ```
 
 This runs our test suite against a couple of major versions of Rails.
