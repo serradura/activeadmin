@@ -23,7 +23,7 @@ require 'rails'
 # Set up some variables
 dir = ".test-rails-apps"
 path = "#{dir}/test-rails-app-#{Rails.version}"
-gemfile_name = "rails_#{Rails::VERSION::MAJOR}.gemfile"
+gemfile_name = "rails_#{Rails::VERSION::MAJOR}#{Rails::VERSION::MINOR}.gemfile"
 gemfile = File.expand_path("../gemfiles/#{gemfile_name}", File.dirname(__FILE__))
 
 # Ensure .test-rails-apps is created
