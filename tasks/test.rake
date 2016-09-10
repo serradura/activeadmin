@@ -12,6 +12,7 @@ task :setup, :parallel do |t, opts|
       --skip-git
       --skip-turbolinks
       --skip-test-unit
+      --skip-spring
     ]
     system "#{'INSTALL_PARALLEL=yes' if opts[:parallel]} bundle exec rails new #{dir} #{args.join ' '}"
     Rake::Task['parallel:after_setup_hook'].invoke if opts[:parallel]
