@@ -19,9 +19,11 @@ rvm:
   - 2.3.1
   - jruby-9.1.5.0
 gemfile:
-  - gemfiles/rails_3.gemfile
-  - gemfiles/rails_4.gemfile
-  - gemfiles/rails_5.gemfile
+  - gemfiles/rails_32.gemfile
+  - gemfiles/rails_40.gemfile
+  - gemfiles/rails_41.gemfile
+  - gemfiles/rails_42.gemfile
+  - gemfiles/rails_50.gemfile
 env:
   global:
     - JRUBY_OPTS="-J-Xmx1024m --debug"
@@ -29,10 +31,10 @@ matrix:
   fast_finish: true
   exclude:
     - rvm: 1.9.3
-      gemfile: gemfiles/rails_5.gemfile
+      gemfile: gemfiles/rails_50.gemfile
   allow_failures:
     - rvm: jruby-9.1.5.0
-      gemfile: gemfiles/rails_5.gemfile
+      gemfile: gemfiles/rails_50.gemfile
 notifications:
   irc:
     channels:

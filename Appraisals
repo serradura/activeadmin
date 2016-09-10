@@ -1,4 +1,4 @@
-appraise 'rails_3' do
+appraise 'rails_32' do
   gem 'rails', '3.2.22'
   gem 'jquery-ui-rails', '~> 4.0'
   gem 'devise', '~> 3.5'
@@ -12,7 +12,31 @@ appraise 'rails_3' do
   gem 'draper', '~> 2.1'
 end
 
-appraise 'rails_4' do
+appraise 'rails_40' do
+  gem 'rails', '4.0.13'
+  gem 'jquery-ui-rails', '~> 5.0'
+  gem 'devise', '~> 3.5'
+
+  gem 'sass-rails'
+  gem 'inherited_resources'
+  gem 'ransack'
+
+  gem 'draper', '~> 2.1'
+end
+
+appraise 'rails_41' do
+  gem 'rails', '4.1.16'
+  gem 'jquery-ui-rails', '~> 5.0'
+  gem 'devise', '~> 3.5'
+
+  gem 'sass-rails'
+  gem 'inherited_resources'
+  gem 'ransack'
+
+  gem 'draper', '~> 2.1'
+end
+
+appraise 'rails_42' do
   gem 'rails', '4.2.7.1'
   gem 'jquery-ui-rails', '~> 5.0'
   gem 'devise', '~> 3.5'
@@ -24,7 +48,7 @@ appraise 'rails_4' do
   gem 'draper', '~> 2.1'
 end
 
-appraise 'rails_5' do
+appraise 'rails_50' do
   gem 'rails', '5.0.0.1'
   gem 'jquery-ui-rails', '~> 5.0'
   gem 'devise', '> 4.x'
