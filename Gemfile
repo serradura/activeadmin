@@ -15,9 +15,9 @@ gem 'test-unit', '~> 3.0' if rails_major == '3'
 
 if rails_major == '5'
   # Note: when updating this list, be sure to also update the README
-  gem 'sass-rails',          github: 'rails/sass-rails'
-  gem 'inherited_resources', github: 'activeadmin/inherited_resources'
-  gem 'ransack',             github: 'activerecord-hackery/ransack'
+  gem 'sass-rails',          git: 'https://github.com/rails/sass-rails'
+  gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
+  gem 'ransack',             git: 'https://github.com/activerecord-hackery/ransack'
 end
 
 gem 'mime-types', '< 3' # Remove this line when we drop support for Ruby 1.9
