@@ -9,7 +9,7 @@ class CreateActiveAdminComments < parent_class
       t.string :resource_id,   null: false
       t.string :resource_type, null: false
       t.references :author, polymorphic: true
-      t.timestamps
+      t.timestamps null: true
     end
     add_index :active_admin_comments, [:namespace]
 
