@@ -9,6 +9,7 @@ cache:
 
   directories:
     - .phantomjs
+    - spec/rails
 
 before_install:
   - gem install bundler # use the very latest Bundler
