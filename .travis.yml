@@ -1,9 +1,14 @@
 language: ruby
 sudo: false
-cache: bundler
-bundler_args: --deployment --without development
+cache:
+  bundler: true
+  directories:
+    - .phantomjs
 before_install:
   - gem install bundler # use the very latest Bundler
+install:
+  - source script/install_phantomjs.sh
+  - bundle install --without development --path vendor/bundle
 before_script:
   - bundle exec rake setup
 script:
