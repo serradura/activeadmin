@@ -44,9 +44,6 @@ group :development do
   gem 'rack-mini-profiler'                  # Inline app profiler. See ?pp=help for options.
   gem 'flamegraph', platforms: :mri         # Flamegraph visualiztion: ?pp=flamegraph
 
-  # Flamegraph dependency
-  gem 'stackprof', platforms: [:mri_21, :mri_22, :mri_23], require: false
-
   # Documentation
   gem 'yard'                                # Documentation generator
   gem 'redcarpet', platforms: :mri          # Markdown implementation (for yard)
