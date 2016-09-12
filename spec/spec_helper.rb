@@ -1,8 +1,5 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
-require "bundler"
-Bundler.setup
-
 require 'simplecov'
 
 SimpleCov.start do

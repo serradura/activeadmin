@@ -12,7 +12,12 @@ cache:
     - spec/rails
 
 before_install:
-  - gem install bundler # use the very latest Bundler
+  - if [ "$TRAVIS_RUBY_VERSION" = "1.9.3" ]; then
+      gem uninstall bundler bundle rubygems-update --all -x &&
+      gem update --system 2.6.1 &&
+      gem install bundler &&
+      gem uninstall rubygems-update --all -x;
+    fi
 
 install:
   - source script/install_phantomjs.sh
