@@ -12,6 +12,7 @@ cache:
     - spec/rails
 
 before_install:
+  - gem update --system # use the very latest Rubygems
   - gem install bundler # use the very latest Bundler
 
 install:
