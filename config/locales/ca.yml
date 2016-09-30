@@ -59,7 +59,7 @@ ca:
       button_label: "les accions per lots"
       default_confirmation: "¿Esteu segur que voleu fer-ho?"
       delete_confirmation: "¿Està segur que desitja eliminar aquests %{plural_model}?"
-      succesfully_destroyed:
+      successfully_destroyed:
         one: "Va destruir amb èxit 1 %{model}"
         other: "Va destruir amb èxit %{count} %{plural_model}"
       selection_toggle_explanation: "(Selecció de Canviar)"

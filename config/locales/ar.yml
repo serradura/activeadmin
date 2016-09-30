@@ -64,7 +64,7 @@ ar:
       button_label: "إجراءات متعددة"
       default_confirmation: "هل أنت متأكّد؟"
       delete_confirmation: "هل أنت متأكّد من حذف هذه %{plural_model}؟"
-      succesfully_destroyed:
+      successfully_destroyed:
         one: "حُذف بنجاح 1 %{model}"
         other: "حُذف بنجاح %{count} %{plural_model}"
       selection_toggle_explanation: "(تتبيث الخيار)"

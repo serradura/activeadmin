@@ -8,6 +8,9 @@
 * `f.form_buffers` has been removed [#3486][] by [@varyonic][]
 * Iconic has been removed [#3553][] by [@timoschilling][]
 * `config.show_comments_in_menu` has been removed, see `config.comments_menu` [#4187][] by [@drn][]
+* `active_admin.batch_actions.succesfully_destroyed` i18 key renamed to
+  `active_admin.batch_actions.successfully_destroyed`. [#4642][] by
+  [@deivid-rodriguez][].
 
 ### Enhancements
 
