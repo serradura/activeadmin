@@ -12,7 +12,7 @@ gem 'pundit'
 
 # Utility gems used in both development & test environments
 gem 'rake'
-gem 'parallel_tests'
+gem 'parallel_tests', '~> 2.9.0'
 
 # Debugging
 gem 'pry'                                   # Easily debug from your console with `binding.pry`
